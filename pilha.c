@@ -15,6 +15,7 @@ void liberar_pilha(Pilha *p) {
 }
 
 int empilhar(Pilha *p, char valor) {
+  // overflow
   if (esta_cheia(p)) {
     // se não tem mais espaço, retorna
     return -1;
@@ -27,6 +28,7 @@ int empilhar(Pilha *p, char valor) {
 }
 
 int desempilhar(Pilha *p) {
+  // underflow da pilha
   if (esta_vazia(p)) {
     return -1;
   }
